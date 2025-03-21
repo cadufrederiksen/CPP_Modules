@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 15:02:27 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/28 14:25:35 by carmarqu         ###   ########.fr       */
+/*   Created: 2025/01/24 12:48:24 by carmarqu          #+#    #+#             */
+/*   Updated: 2025/01/24 13:40:49 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-	#define ITER_HPP
+#ifndef EASYFIND_HPP
+	#define EASYFIND_HPP
 
 #include <iostream>
+#include <vector>
 
 template <typename T>
-void	iter(T *array, int len, void (*func)(T&))
+typename T::iterator easyfind(T &cont, int nbr)
 {
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-
-template <typename T>
-void	iter(const T *array, int len, void (*func)(const T&))
-{
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-template <typename T>
-void	print_iter(T &t)
-{
-	std::cout << t << std::endl;
+	for (typename T::iterator it = cont.begin(); it != cont.end(); it++)
+		if (*it == nbr)
+			return it;
+	throw std::out_of_range ("Number not in the container!");
 }
 
 #endif

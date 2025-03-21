@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 15:02:27 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/28 14:25:35 by carmarqu         ###   ########.fr       */
+/*   Created: 2025/01/24 15:24:58 by carmarqu          #+#    #+#             */
+/*   Updated: 2025/02/05 12:37:25 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-	#define ITER_HPP
-
+#ifndef SPAN_HPP
+	#define SPAN_HPP
+	
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <ctime>
 
-template <typename T>
-void	iter(T *array, int len, void (*func)(T&))
-{
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
 
-template <typename T>
-void	iter(const T *array, int len, void (*func)(const T&))
+class Span
 {
-	for (int i = 0; i < len; i++)
-		func(array[i]);
+	private:
+		std::vector<int> _container;
+		unsigned int _N;
+	
+	public:
+		Span();
+		Span(unsigned int N);
+		Span(const Span &orig);
+		Span &operator=(const Span &orig);
+		~Span();
+	
+	void	addNumber(int nbr);
+	void	addManyNumbers(unsigned int size);
+	int		shortestSpan();
+	int		longestSpan();
+	
 };
-template <typename T>
-void	print_iter(T &t)
-{
-	std::cout << t << std::endl;
-}
 
 #endif

@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 15:02:27 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/28 14:25:35 by carmarqu         ###   ########.fr       */
+/*   Created: 2025/01/24 12:47:41 by carmarqu          #+#    #+#             */
+/*   Updated: 2025/01/24 13:43:03 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-	#define ITER_HPP
+#include "easyfind.hpp"
 
-#include <iostream>
-
-template <typename T>
-void	iter(T *array, int len, void (*func)(T&))
+int main()
 {
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-
-template <typename T>
-void	iter(const T *array, int len, void (*func)(const T&))
-{
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-template <typename T>
-void	print_iter(T &t)
-{
-	std::cout << t << std::endl;
+	std::vector<int> array = {1, 2, 3, 4, 5};
+	try
+	{
+		std::vector<int>::iterator it = easyfind(array, 7); 
+		std::cout << "Element found: " << *it << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 }
-
-#endif

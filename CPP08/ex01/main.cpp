@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 15:02:27 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/28 14:25:35 by carmarqu         ###   ########.fr       */
+/*   Created: 2025/01/24 15:31:26 by carmarqu          #+#    #+#             */
+/*   Updated: 2025/02/05 12:38:51 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-	#define ITER_HPP
+#include "Span.hpp"
 
-#include <iostream>
-
-template <typename T>
-void	iter(T *array, int len, void (*func)(T&))
+int main()
 {
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-
-template <typename T>
-void	iter(const T *array, int len, void (*func)(const T&))
-{
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-template <typename T>
-void	print_iter(T &t)
-{
-	std::cout << t << std::endl;
+	Span sp = Span(5);
+	sp.addManyNumbers(5);
+	
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
+	return 0;
 }
-
-#endif

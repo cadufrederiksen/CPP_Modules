@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 15:02:27 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/28 14:25:35 by carmarqu         ###   ########.fr       */
+/*   Created: 2025/01/28 13:42:50 by carmarqu          #+#    #+#             */
+/*   Updated: 2025/01/28 14:29:47 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-	#define ITER_HPP
+#include "MutantStack.hpp"
 
-#include <iostream>
-
-template <typename T>
-void	iter(T *array, int len, void (*func)(T&))
+int main()
 {
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-
-template <typename T>
-void	iter(const T *array, int len, void (*func)(const T&))
-{
-	for (int i = 0; i < len; i++)
-		func(array[i]);
-};
-template <typename T>
-void	print_iter(T &t)
-{
-	std::cout << t << std::endl;
+	MutantStack<int> stack;
+	
+	stack.push(734);
+	stack.push(33);
+	stack.push(3313);
+	stack.push(231);
+	stack.push(11);
+	
+	for (MutantStack<int>::iterator it = stack.begin(); it != stack.end(); it++)
+	{
+		std::cout << *it << std::endl;
+	}
 }
-
-#endif
