@@ -69,10 +69,4 @@ Os módulos avançados exploram funcionalidades poderosas do C++, proporcionando
 
 ---
 
-## 🚀 Como Usar
 
-Para compilar e executar os exercícios e projetos dos módulos:  
-
-1. Clone este repositório:  
-   ```bash
-   git clone https://github.com/seu-usuario/cpp-modules.git
