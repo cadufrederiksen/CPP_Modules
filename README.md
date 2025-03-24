@@ -1,71 +1,71 @@
-# 🚀 Módulos C++ (00-09) - Introdução e Conceitos Avançados
+# 🚀 C++ Modules (00-09) - Introduction and Advanced Concepts
 
-Este conjunto de módulos tem como objetivo introduzir e aprofundar os conceitos fundamentais e avançados da **programação orientada a objetos (OOP)** utilizando o **C++**. Desde os princípios básicos até tópicos complexos, os módulos são projetados para construir uma compreensão sólida do C++ e sua aplicação no desenvolvimento de software moderno.
-
----
-
-## 📋 Objetivo Geral
-
-- Compreender as diferenças entre **C e C++**.  
-- Aprender a usar as funcionalidades exclusivas do C++ para resolver problemas de forma eficiente.  
-- Aplicar conceitos avançados de OOP, como herança, polimorfismo e templates.  
+This set of modules aims to introduce and deepen the fundamental and advanced concepts of **object-oriented programming (OOP)** using **C++**. From basic principles to complex topics, the modules are designed to build a solid understanding of C++ and its application in modern software development.
 
 ---
 
-## 🧩 Módulos 00-04: Fundamentos de C++
+## 📋 General Objective
 
-Os primeiros módulos são focados em ensinar os pilares da programação orientada a objetos e introduzir as características do C++.
-
-### ✨ Conceitos Principais
-1. **Espaços de Nomes (Namespaces)**: organização e escopo do código.  
-2. **Clases e Instâncias**:
-   - Criação e uso de classes.  
-   - Atributos e funções de membro.  
-3. **Inicialização com Listas**: inicializadores para atributos de classe.  
-4. **Uso de `const` e `static`**: para definição de atributos e funções de classe.  
-5. **Comparação entre `struct` e `class`**: diferenças e melhores práticas.  
-6. **Gestão de Memória**:
-   - Uso de `new` e `delete` para alocação e liberação de memória.  
-   - Ponteiros e referências a membros.  
-7. **Ciclo de Vida e Escopo de Variáveis**: entender como variáveis são criadas e destruídas.  
-8. **Polimorfismo Ad-Hoc**:
-   - Sobrecarga de funções.  
-   - Sobrecarga de operadores.  
-9. **Clases Canônicas Ortodoxas**:
-   - Aprender sobre construtores, destrutores, e operadores de atribuição.  
-10. **Herança e Polimorfismo de Subtipos**:
-    - Especificadores de acesso (`public`, `private`, `protected`).  
-    - Herança múltipla e o problema do diamante.  
-    - Implementação de classes abstratas e interfaces.  
+- Understand the differences between **C and C++**.  
+- Learn to use C++-specific features to solve problems efficiently.  
+- Apply advanced OOP concepts, such as inheritance, polymorphism, and templates.  
 
 ---
 
-## 🛠️ Módulos 05-09: Conceitos Avançados de C++
+## 🧩 Modules 00-04: C++ Fundamentals
 
-Os módulos avançados exploram funcionalidades poderosas do C++, proporcionando habilidades para lidar com desafios complexos em OOP.
+The first modules focus on teaching the pillars of object-oriented programming and introducing C++ features.
 
-### ✨ Conceitos Principais
-1. **Manejo de Exceções**:
-   - Utilização de `try`, `catch` e `throw`.  
-   - Controle de fluxo com exceções.  
-2. **Casting Avançado**:
-   - Tipos de casting: `static_cast`, `dynamic_cast`, `const_cast`, e `reinterpret_cast`.  
-3. **Templates em C++**:
-   - Criação e uso de **funções e classes genéricas**.  
-   - Trabalhar com **containers plantillados**, iteradores e algoritmos.  
-4. **Biblioteca Padrão de Templates (STL)**:
-   - Uso de contêineres como `vector`, `map`, `set`, e `list`.  
-   - Algoritmos genéricos como `sort`, `find`, e `accumulate`.  
-5. **Aprofundamento em Algoritmos e Estruturas**:
-   - Implementação e otimização de algoritmos utilizando templates e STL.  
+### ✨ Main Concepts
+1. **Namespaces**: Code organization and scope.  
+2. **Classes and Instances**:  
+   - Creating and using classes.  
+   - Attributes and member functions.  
+3. **List Initialization**: Initializers for class attributes.  
+4. **Use of `const` and `static`**: For defining class attributes and functions.  
+5. **Comparison between `struct` and `class`**: Differences and best practices.  
+6. **Memory Management**:  
+   - Using `new` and `delete` for memory allocation and deallocation.  
+   - Pointers and member references.  
+7. **Variable Lifecycle and Scope**: Understanding how variables are created and destroyed.  
+8. **Ad-Hoc Polymorphism**:  
+   - Function overloading.  
+   - Operator overloading.  
+9. **Orthodox Canonical Classes**:  
+   - Understanding constructors, destructors, and assignment operators.  
+10. **Inheritance and Subtype Polymorphism**:  
+    - Access specifiers (`public`, `private`, `protected`).  
+    - Multiple inheritance and the diamond problem.  
+    - Implementation of abstract classes and interfaces.  
 
 ---
 
-## 📚 Benefícios do Curso
+## 🛠️ Modules 05-09: Advanced C++ Concepts
 
-- **Compreensão profunda de OOP** com aplicação prática em C++.  
-- **Desenvolvimento de habilidades avançadas**, como gerenciamento de memória e manipulação de templates.  
-- **Exploração de conceitos modernos** de C++, como casting avançado e STL.  
+The advanced modules explore powerful C++ functionalities, providing skills to tackle complex OOP challenges.
+
+### ✨ Main Concepts
+1. **Exception Handling**:  
+   - Using `try`, `catch`, and `throw`.  
+   - Control flow with exceptions.  
+2. **Advanced Casting**:  
+   - Types of casting: `static_cast`, `dynamic_cast`, `const_cast`, and `reinterpret_cast`.  
+3. **C++ Templates**:  
+   - Creating and using **generic functions and classes**.  
+   - Working with **templated containers**, iterators, and algorithms.  
+4. **Standard Template Library (STL)**:  
+   - Using containers like `vector`, `map`, `set`, and `list`.  
+   - Generic algorithms like `sort`, `find`, and `accumulate`.  
+5. **In-Depth Algorithms and Structures**:  
+   - Implementing and optimizing algorithms using templates and STL.  
+
+---
+
+## 📚 Course Benefits
+
+- **Deep understanding of OOP** with practical application in C++.  
+- **Development of advanced skills**, such as memory management and template manipulation.  
+- **Exploration of modern C++ concepts**, like advanced casting and STL.  
 
 ---
 
