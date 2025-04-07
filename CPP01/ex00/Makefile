@@ -17,3 +17,6 @@ fclean: clean
 	rm -f $(NAME)
 	
 re: clean all
+
+.PHONY:
+clean all re fclean

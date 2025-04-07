@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:33:56 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/04 15:43:22 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/07 17:11:30 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,12 @@ int		RPN::calculate(char op)
 			}
 			result = v1 / v2;
 			break;
-		default:
-			break;
+	}
+	
+	if (result > 2147483647 || result < -2147483648)
+	{
+		std::cout << "Result is out of the range" << std::endl;
+		exit(1);		
 	}
 	_dq.push_front(result);
 	return 1;

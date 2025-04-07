@@ -6,15 +6,15 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:02:13 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/30 17:06:34 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/07 17:03:53 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 
-bool check_input(std::string date)
+bool check_input(std::string date, std::string rate)
 {
-	if (date[4] != '-' && date[7] != '-')
+	if (date[4] != '-' || date[7] != '-')
 		return false;
 	
 	std::string year = date.substr(0, 4);
@@ -33,17 +33,24 @@ bool check_input(std::string date)
 	int m = std::stoi(month);
 	int d = std::stoi(day);
 	
-	if (m < 1 || m > 12 && d < 1 || d > 31 || y < 2009)
+	if (m < 1 || m > 12 || d < 1 || d > 31 || y < 2009)
 		return false; 
+		
+	for (char c : rate)
+	{
+		if (!std::isdigit(c) && c != '.')
+			return false;	
+	}
+
+
 	return true;
 }
 
 int main(int argc, char **argv)
 {
 	BitcoinExchange btc;
-	std::string line, date, pipe;
+	std::string line, date, pipe, rate;
 	bool firstflag = true;
-	double rate;
 	 
 	if (argc != 2)
 	{
@@ -70,14 +77,14 @@ int main(int argc, char **argv)
 		}	
 		else if (iss >> date >> pipe >> rate)//separa os valores de line por espaço, na respectiva ordem
 		{
-			if (!check_input(date) || pipe != "|")
+			if (!check_input(date, rate) || pipe != "|")
 				std::cerr << "Error: Bad input => " << date << std::endl;
-			if (rate > 2147483647)
+			else if (std::stod(rate) > 2147483647)
 				std::cerr << "Error: too large number." << std::endl;
-			else if (rate < 0)
+			else if (std::stod(rate) < 0)
 				std::cerr << "Error: not a positive number." << std::endl;
 			else
-				btc.returnValue(date, rate);
+				btc.returnValue(date, std::stod(rate));
 		}
 		else
 		{

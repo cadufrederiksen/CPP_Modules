@@ -6,7 +6,7 @@
 #    By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/20 19:31:11 by carmarqu          #+#    #+#              #
-#    Updated: 2024/09/20 19:40:08 by carmarqu         ###   ########.fr        #
+#    Updated: 2025/04/07 17:14:02 by carmarqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,3 +29,6 @@ fclean: clean
 	rm -f $(NAME)
 	
 re: fclean all
+
+.PHONY:
+clean all re fclean
