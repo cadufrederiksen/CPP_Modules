@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:02:13 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/07 17:03:53 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/09 14:45:21 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 		{
 			if (!check_input(date, rate) || pipe != "|")
 				std::cerr << "Error: Bad input => " << date << std::endl;
-			else if (std::stod(rate) > 2147483647)
+			else if (std::stod(rate) > 1000)
 				std::cerr << "Error: too large number." << std::endl;
 			else if (std::stod(rate) < 0)
 				std::cerr << "Error: not a positive number." << std::endl;

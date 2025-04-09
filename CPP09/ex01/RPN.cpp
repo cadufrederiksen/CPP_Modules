@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:33:56 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/07 17:11:30 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:39:08 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,29 @@ RPN::RPN(const RPN &orig)
 
 RPN::~RPN()
 {
-	std::cout << "RPN                                                                                                                                                                                                           destructor called" << std::endl;
+	std::cout << "RPN destructor called" << std::endl;
 }
 
 void	RPN::addDeque(std::string str)
-{
+{	
+	int flag = 0;
+	
 	for (int x = 0; x < str.size(); x++)
 	{
+		
 		if (str[x] != ' ')
 		{
 			if (std::isdigit(str[x]))
+			{
 				_dq.push_back(str[x] - '0');//adc  so numeros ao _dq
-			else 
+				flag += 1;
+			}
+			else if (flag < 2 && x <= 3)
+			{
+				std::cout << "Invalid format\n";
+				exit(1);
+			}
+			else
 				calculate(str[x]);
 		}
 	}
@@ -58,7 +69,7 @@ int		RPN::calculate(char op)
 	_dq.pop_back();
 	int v1 = _dq.back();
 	_dq.pop_back();// a conta eh feita pelos numeros mais a direita
-		
+
 	switch (op)
 	{
 		case '*':
@@ -79,12 +90,11 @@ int		RPN::calculate(char op)
 			result = v1 / v2;
 			break;
 	}
-	
 	if (result > 2147483647 || result < -2147483648)
 	{
 		std::cout << "Result is out of the range" << std::endl;
 		exit(1);		
 	}
-	_dq.push_front(result);
+	_dq.push_back(result);
 	return 1;
 }

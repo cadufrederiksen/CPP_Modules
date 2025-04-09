@@ -6,7 +6,7 @@
 #    By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/20 19:31:11 by carmarqu          #+#    #+#              #
-#    Updated: 2025/04/07 17:14:02 by carmarqu         ###   ########.fr        #
+#    Updated: 2025/04/09 14:37:41 by carmarqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,5 +30,4 @@ fclean: clean
 	
 re: fclean all
 
-.PHONY:
-clean all re fclean
+.PHONY: clean all re fclean
