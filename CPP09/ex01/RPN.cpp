@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:33:56 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/09 15:39:08 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/10 17:45:54 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,31 +64,37 @@ void	RPN::addDeque(std::string str)
 
 int		RPN::calculate(char op)
 {
+	if (_dq.size() < 2)
+	{
+		std::cout << "Invalid format\n";
+		exit(1);
+	}
+	
 	int result;
 	int v2 = _dq.back();
 	_dq.pop_back();
-	int v1 = _dq.back();
+		int v1 = _dq.back();
 	_dq.pop_back();// a conta eh feita pelos numeros mais a direita
 
 	switch (op)
 	{
 		case '*':
-			result = v1 * v2;
-			break;
+		result = v1 * v2;
+		break;
 		case '-':
-			result = v1 - v2;
-			break;
+		result = v1 - v2;
+		break;
 		case '+':
-			result = v1 + v2;
-			break;
+		result = v1 + v2;
+		break;
 		case '/':
-			if (v2 == 0)
-			{
-				std::cerr << "Error" << std::endl;
-				exit(0);
-			}
-			result = v1 / v2;
-			break;
+		if (v2 == 0)
+		{
+			std::cerr << "Error" << std::endl;
+			exit(0);
+		}
+		result = v1 / v2;
+		break;
 	}
 	if (result > 2147483647 || result < -2147483648)
 	{
