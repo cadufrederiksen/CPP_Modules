@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:02:13 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/09 14:45:21 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/10 16:42:30 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ bool check_input(std::string date, std::string rate)
 	{
 		if (!std::isdigit(year[x]))
 			return false;
-		if (x < 2 && !std::isdigit(month[x]) && !std::isdigit(day[x]))
+		if ((x < 2 && !std::isdigit(month[x])) || (x < 2 && !std::isdigit(day[x])))
 			return false; 
 	}
 	
