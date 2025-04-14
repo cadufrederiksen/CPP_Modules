@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:06:54 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/07 16:37:06 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 12:47:50 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &orig)
 		_exchangeData = orig._exchangeData;
 	std::cout << "BitcoinExchange copy operator called" << std::endl;
 	return *this;
-};
+}
 
 BitcoinExchange::~BitcoinExchange()
 {
 	std::cout << "BitcoinExchange destructor called" << std::endl;
-};
+}
 
 bool BitcoinExchange::getExchangeData(const std::string &file)
 {
