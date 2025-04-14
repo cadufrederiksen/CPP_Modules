@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 14:57:00 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/10/25 12:43:41 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:42:24 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void		Contact::set_phone(void)
 			std::cout << "Number can't be empty" << std::endl;
 		else
 		{
-			for (int x = 0; x < input.length(); x++)
+			for (unsigned long x = 0; x < input.size(); x++)
 			{
 				if(!std::isdigit(input[x]))
 				{

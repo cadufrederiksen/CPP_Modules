@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 15:50:20 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/09/28 17:54:45 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:39:17 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)//exec, nome do aqruivo, str a buscar, str a subs
 	}
 
 	std::ifstream file(argv[1]);//abre arquivo como parametro para leitura
-	std::ofstream(new_file);//declaro o arquivo novo (cria se n existe) 
+	std::ofstream new_file;//declaro o arquivo novo (cria se n existe) 
 	if (!file.is_open())
 	{
 		std::cout << "Error opening the file!" << std::endl;

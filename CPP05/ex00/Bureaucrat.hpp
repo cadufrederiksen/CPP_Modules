@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 13:49:13 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/12/03 16:54:30 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:15:36 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Bureaucrat
 		~Bureaucrat();
 		
 		std::string getName() const;
-		std::string getGrade() const;
+		int getGrade() const;
 		
 		void IncrementGrade(int value);
 		void DecrementGrade(int value);

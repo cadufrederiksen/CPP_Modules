@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 00:04:58 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/07 14:17:01 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:11:28 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 			throw AForm::FormNotSigned();
 		if (executor.getGrade() > this->getGradeExec())
 			throw AForm::GradeTooLowException();
-		std::ofstream newfile (getTarget() + "_shrubbery");
+		std::ofstream newfile ((getTarget() + "_shrubbery").c_str());
 		if (newfile.is_open())
 		{
 			newfile << "       _-_\n";

@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:10:47 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/12/03 16:49:21 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:13:12 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Form::Form() : _name("name"), _signed(false), _gradeSign(150), _gradeExec(0)
     std::cout << "Form default constructor called" << std::endl;
 }
 
-Form::Form(std::string name, int gradeSign, int gradeExec) : _name(name), _gradeSign(gradeSign), _gradeExec(gradeExec), _signed(false)
+Form::Form(std::string name, int gradeSign, int gradeExec) : _name(name), _signed(false), _gradeSign(gradeSign), _gradeExec(gradeExec)
 {
     std::cout << "Form constructor called" << std::endl;
     if (_gradeSign < 1 || _gradeExec < 1)
@@ -34,7 +34,7 @@ Form &Form::operator=(const Form &orig)
     return *this;
 }
 
-Form::Form(const Form &orig) : _name(orig._name), _gradeExec(orig._gradeExec), _gradeSign(_gradeSign)
+Form::Form(const Form &orig) : _name(orig._name), _gradeSign(orig._gradeSign),  _gradeExec(orig._gradeExec)
 {
     *this = orig;
     std::cout << "Form copy constructor called" << std::endl;
@@ -55,12 +55,12 @@ const std::string Form::getName() const
     return _name;
 }
 
-const int Form::getGradeExec() const
+int Form::getGradeExec() const
 {
     return _gradeExec;
 }
 
-const int Form::getGradeSign() const
+int Form::getGradeSign() const
 {
     return _gradeSign;
 }

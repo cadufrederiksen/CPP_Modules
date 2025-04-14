@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:39:16 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/16 13:06:26 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:46:12 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 	#define SERIALIZATION_HPP
 
 #include <iostream>
-#include <cstdint>
+#include <inttypes.h>
 
 typedef struct t_data{
 	

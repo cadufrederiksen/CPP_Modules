@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 12:47:41 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/24 13:43:03 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:25:09 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 int main()
 {
-	std::vector<int> array = {1, 2, 3, 4, 5};
+	std::vector<int> vec(5, 0);
+	vec.push_back(1);
+	vec.push_back(2);
+	vec.push_back(3);
+	vec.push_back(4);
+	vec.push_back(5);
 	try
 	{
-		std::vector<int>::iterator it = easyfind(array, 7); 
+		std::vector<int>::iterator it = easyfind(vec, 3); 
 		std::cout << "Element found: " << *it << std::endl;
 	}
 	catch(const std::exception& e)

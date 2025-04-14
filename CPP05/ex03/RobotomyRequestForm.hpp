@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 17:04:49 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/07 15:44:49 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:06:35 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 	
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include <cstdlib>
 
 class RobotomyRequestForm : public AForm
 {

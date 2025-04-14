@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:25:22 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/26 13:33:53 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:49:51 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,17 @@ void ScalarConverter::converter(const std::string &str)
 		{
 			if (str[str.length() - 1] == 'f')//is a float
 			{
-				f = std::stof(str);
+				f = std::atof(str.c_str());
 				i = static_cast<int>(f);
 			}
 			else
 			{
-				d = std::stod(str);
+				d = std::atof(str.c_str());
 				i = static_cast<int>(d);
 			}
 		}
 		else
-			i = std::stoi(str);
+			i = std::atoi(str.c_str());
 	}
 	if (x > 5)
 	{	

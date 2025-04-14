@@ -6,18 +6,18 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:45:38 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/12/03 16:56:24 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:15:29 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _grade(150), _name("name")
+Bureaucrat::Bureaucrat() : _name("name"), _grade(150)
 {
 	std::cout << "Bureaucrat default contructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(int grade, std::string name) : _grade(grade), _name(name)
+Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name), _grade(grade)
 {
 	std::cout << "Bureaucrat constructor called" << std::endl;
 	if (grade < 1)
@@ -55,10 +55,9 @@ std::string Bureaucrat::getName() const
 	return _name;
 }
 
-std::string Bureaucrat::getGrade() const
+int Bureaucrat::getGrade() const
 {
-	std::string str = std::to_string(_grade);
-	return str;
+	return _grade;
 }
 
 void Bureaucrat::IncrementGrade(int value)

@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 00:03:34 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/11/06 17:00:35 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:27:32 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap{
+class DiamondTrap :  public FragTrap, public ScavTrap{
 	
 	private:
 		std::string _name;

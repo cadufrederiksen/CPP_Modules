@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 15:19:41 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/24 15:38:29 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:28:49 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ Array<T>	&Array<T>::operator=(const Array &orig){
 	{
 		len = orig.len;
 		_array = new T[orig.len];
-		for (int x = 0; x < orig.len; x++)
+		for (unsigned int x = 0; x < orig.len; x++)
 			this->_array[x] = orig._array[x];
 	}
 	std::cout << "Array copy operator called" << std::endl;

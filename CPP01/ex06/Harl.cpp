@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 20:13:37 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/10/02 15:55:37 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:37:33 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,13 @@ void Harl::complain(std::string level)
 	switch (x){
 	case 0:
 		debug();
+		// fallthrough
 	case 1:
 		info();
+		// fallthrough
 	case 2:
 		warning();
+		// fallthrough
 	case 3:
 		error();
 		break;

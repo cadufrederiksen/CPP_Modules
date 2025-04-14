@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 19:21:24 by carmarqu          #+#    #+#             */
-/*   Updated: 2024/09/20 19:58:02 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:43:08 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main(int argc, char** argv)
     int x;
 
     x = 1;
+    (void)argc;
     if (!argv[x])
         std::cout << " * LOUD AND UNBEARABLE FEEDBACK NOISE";
     while (argv[x])

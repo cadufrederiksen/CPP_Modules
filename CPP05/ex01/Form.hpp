@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:10:18 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/03 15:42:26 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 22:12:04 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ class Form
 		// getters
 		bool getSigned() const;
 		const std::string getName() const;
-		const int		getGradeExec() const;
-		const int		getGradeSign() const;
+		int		getGradeExec() const;
+		int		getGradeSign() const;
 		
 		
 	class GradeTooLowException : public std::exception

@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 15:29:04 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/16 14:16:46 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:33:43 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Base* Base::generate()
 		case 3:
 			return new C();
 		default:
-			return nullptr;
+			return NULL;
 	}
 }
 

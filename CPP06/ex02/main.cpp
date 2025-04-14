@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 15:40:29 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/01/16 14:50:41 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:33:28 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int main ()
 {
-	Base *obj= obj->generate();
+	Base *obj = NULL;
+	obj = obj->generate();
 	Base *null = NULL;
 	obj->identify(obj);
 	obj->identify(*obj);

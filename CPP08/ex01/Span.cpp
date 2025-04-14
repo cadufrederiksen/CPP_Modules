@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 15:31:49 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/03/06 12:37:53 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:26:19 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Span &Span::operator=(const Span &orig)
 	if (this != &orig)
 	{
 		_N = orig._N;
-		for (int x = 0; x < orig._N; x++)
+		for (unsigned int x = 0; x < orig._N; x++)
 			_container[x] = orig._container[x];
 	}
 	std::cout << "Span copy operator called" << std::endl;
@@ -69,7 +69,7 @@ int Span::shortestSpan()
 	std::vector<int> sorted(_container);
 	std::sort(sorted.begin(), sorted.end());//ordena del menor a maior
 	int diff = sorted[1] - sorted[0];
-	for (int i = 1; i < sorted.size() - 1; i++)
+	for (unsigned long i = 1; i < sorted.size() - 1; i++)
 	{
 		int span = sorted[i + 1] - sorted[i];
 		if (diff > span)
@@ -81,7 +81,7 @@ int Span::shortestSpan()
 void Span::addManyNumbers(unsigned int size)
 {
 	std::srand(std::time(0));
-	for (int x = 0; x < size; x++)
+	for (unsigned int x = 0; x < size; x++)
 	{
 		int random = std::rand() % 10000 + 1;
 		_container.push_back(random);
