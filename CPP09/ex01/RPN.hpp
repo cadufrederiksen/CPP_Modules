@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:20:20 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/04 13:39:24 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:35:53 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 	
 #include <iostream>
 #include <deque>
+#include <cstdlib>
 
 class RPN
 {

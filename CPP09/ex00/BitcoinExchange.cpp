@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 15:06:54 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/14 12:47:50 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:13:43 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ BitcoinExchange::~BitcoinExchange()
 
 bool BitcoinExchange::getExchangeData(const std::string &file)
 {
-	std::ifstream infile(file);
+	std::ifstream infile(file.c_str());
 	std::string date, value, line;
 	if (!infile.is_open())
 		return false;
@@ -48,7 +48,7 @@ bool BitcoinExchange::getExchangeData(const std::string &file)
 		if (line == "date,exchange_rate")
 			continue ; //pula uma linha do bucle
 		else if (std::getline(iss, date, ',') && std::getline(iss, value) && std::isdigit(line[0]))
-			this->_exchangeData[date] = std::stod(value.c_str());
+			this->_exchangeData[date] = std::atoi(value.c_str());
 		else
 			std::cerr << "Error parsing the line " << line << std::endl;
 	}

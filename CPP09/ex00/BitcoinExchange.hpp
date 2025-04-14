@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 14:52:08 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/14 12:53:10 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:01:31 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <map>
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
 
 class	BitcoinExchange
 {

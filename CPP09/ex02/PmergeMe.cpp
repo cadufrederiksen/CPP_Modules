@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 12:19:01 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/20 13:38:09 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:39:24 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ PmergeMe::~PmergeMe()
 
 void PmergeMe::InsertNums(const std::string &str)
 {
-	for (int x = 0; x < str.size(); x++)
+	for (unsigned long x = 0; x < str.size(); x++)
 	{
 		if(!std::isdigit(str[x]))
 			throw std::invalid_argument("Error");
@@ -56,7 +56,7 @@ void PmergeMe::InsertNums(const std::string &str)
 void	PmergeMe::Pmerge()
 {
 	std::cout << "Before: ";
-	for(int x = 0; x < _vector.size(); x++)
+	for(unsigned long x = 0; x < _vector.size(); x++)
 		std::cout << _vector[x] << ' ';
 	std::cout << std::endl;
 
@@ -65,7 +65,7 @@ void	PmergeMe::Pmerge()
 	std::clock_t v_end = std::clock();
 	
 	std::cout << "After: ";
-	for(int x = 0; x < _vector.size(); x++)
+	for(unsigned long x = 0; x < _vector.size(); x++)
 		std::cout << _vector[x] << ' ';
 	std::cout << std::endl;
 	

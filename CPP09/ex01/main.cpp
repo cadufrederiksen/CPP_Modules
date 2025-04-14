@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:39:12 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/09 15:02:39 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:34:26 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ bool CheckInput(std::string input)
 	
 	if (input.empty())
 		return false;
-	for (int x = 0; x < input.size(); x++)
+	for (unsigned long x = 0; x < input.size(); x++)
 	{
 		if (!std::isdigit(input[x]) && input[x] != '*' && input[x] != '+' 
 			&& input[x] != '-' && input[x] != '/' && input[x] != ' ')

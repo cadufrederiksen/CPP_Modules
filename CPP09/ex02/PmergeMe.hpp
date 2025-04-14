@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:03:37 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/02/20 13:26:04 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:39:31 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <vector>
 #include <sstream>
 #include <ctime>
+#include <cstdlib>
 
 class PmergeMe
 {

@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:33:56 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/10 17:45:54 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:35:21 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	RPN::addDeque(std::string str)
 {	
 	int flag = 0;
 	
-	for (int x = 0; x < str.size(); x++)
+	for (unsigned long x = 0; x < str.size(); x++)
 	{
 		
 		if (str[x] != ' ')
@@ -96,7 +96,7 @@ int		RPN::calculate(char op)
 		result = v1 / v2;
 		break;
 	}
-	if (result > 2147483647 || result < -2147483648)
+	if (result > 2147483647 || result < -2147483647)
 	{
 		std::cout << "Result is out of the range" << std::endl;
 		exit(1);		

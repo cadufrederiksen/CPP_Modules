@@ -6,7 +6,7 @@
 /*   By: carmarqu <carmarqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:02:13 by carmarqu          #+#    #+#             */
-/*   Updated: 2025/04/10 16:42:30 by carmarqu         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:39:12 by carmarqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 bool check_input(std::string date, std::string rate)
 {
-	if (date[4] != '-' || date[7] != '-')
+
+	if (date[4] != '-' || date[7] != '-' || date[10] != '\0')
 		return false;
 	
 	std::string year = date.substr(0, 4);
@@ -29,18 +30,16 @@ bool check_input(std::string date, std::string rate)
 			return false; 
 	}
 	
-	int y = std::stoi(year); 
-	int m = std::stoi(month);
-	int d = std::stoi(day);
+	int y = std::atoi(year.c_str()); 
+	int m = std::atoi(month.c_str());
+	int d = std::atoi(day.c_str());
 	
 	if (m < 1 || m > 12 || d < 1 || d > 31 || y < 2009)
 		return false; 
 		
-	for (char c : rate)
-	{
-		if (!std::isdigit(c) && c != '.')
+	for (unsigned long x = 0; x < rate.size(); x++)
+		if (!std::isdigit(rate[x]) && rate[x] != '.')
 			return false;	
-	}
 
 
 	return true;
@@ -79,12 +78,12 @@ int main(int argc, char **argv)
 		{
 			if (!check_input(date, rate) || pipe != "|")
 				std::cerr << "Error: Bad input => " << date << std::endl;
-			else if (std::stod(rate) > 1000)
+			else if (atof(rate.c_str()) > 1000)
 				std::cerr << "Error: too large number." << std::endl;
-			else if (std::stod(rate) < 0)
+			else if (atof(rate.c_str()) < 0)
 				std::cerr << "Error: not a positive number." << std::endl;
 			else
-				btc.returnValue(date, std::stod(rate));
+				btc.returnValue(date, atof(rate.c_str()));
 		}
 		else
 		{
